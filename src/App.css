@@ -1,38 +1,113 @@
-.App {
-  text-align: center;
+* {
+    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background: rgba(57, 29, 65, 0.918);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.timer {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 600px;
+  min-height: 600px;
+  background: linear-gradient(
+    130deg,
+    rgb(7, 1, 8) 0%,
+    rgb(66, 39, 65) 100%
+  );
+  text-align: center;
+  margin: 128px auto;
+  border-radius: 300px;
+  padding-bottom: 32px;
+  box-shadow: #00000033 10px 20px 30px 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.buttons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.output {
+    display: block;
+    text-align: center;
+    color: #fff;
+    font-size: 92px;
 }
+
+.input {
+    display: block;
+    margin: 0px auto;
+    margin-top: 30px;
+    padding: 14px 32px 14px 16px;
+    border-radius: 7px 7px 0px 0px;
+    border: 1px solid #907f97;
+    outline: none;
+    background: transparent;
+    color: #fff;
+    width: 240px;
+  }
+
+  .input::-webkit-outer-spin-button,
+  .input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+  
+  .input::placeholder {
+    color: #727272;
+  }
+
+  .start-button {
+    padding: 16px;
+    border: none;
+    border-radius: 0px 0px 7px 0px;
+    min-width: 100px;
+    border: 1px solid #907f97;
+    cursor: pointer;
+    outline: none;
+    background: linear-gradient(
+      90deg,
+      rgba(12, 65, 47, 0.897) 10%,
+      rgb(102, 177, 152) 100%
+    );
+    color: #fff;
+  }
+
+  .pause-button {
+    padding: 16px;
+    border: none;
+    border-radius: 0px 0px 0px 7px;
+    border: 1px solid #907f97;
+    cursor: pointer;
+    outline: none;
+    min-width: 50px;
+    background: linear-gradient(
+      90deg,
+      rgb(82, 3, 82) 0%,
+      rgb(180, 88, 180) 100%
+    );
+    color: #fff;
+  }
+
+  .reset-button {
+    padding: 16px;
+    border: none;
+    border: 1px solid #baaebe;
+    cursor: pointer;
+    outline: none;
+    min-width: 50px;
+    background: linear-gradient(
+      90deg,
+      rgb(129, 40, 85) 0%,
+      rgb(211, 124, 165) 100%
+    );
+    color: #fff;
+  }
